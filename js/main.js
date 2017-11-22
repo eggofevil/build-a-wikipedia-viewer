@@ -19,7 +19,8 @@ function responseAction(response) {
 
 function getRndArt() {
   request.open('GET', buildUrl());
-  request.setRequestHeader('Api-User-Agent', 'Wikipedia searcher test application. nucleusofgood@gmail.com');
+  request.setRequestHeader('Access-Control-Allow-Origin', 'https://eggofevil.github.io/build-wikipedia-viewer/');
+  request.setRequestHeader('User-Agent', 'Wikipedia searcher test application (https://eggofevil.github.io/build-wikipedia-viewer/; nucleusofgood@gmail.com)');
   request.responseType = 'json';
   request.addEventListener('load', function () {responseAction(request.response); });
   request.send();
