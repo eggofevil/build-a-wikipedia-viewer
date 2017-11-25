@@ -1,3 +1,125 @@
-button {
+@font-face {
+    font-family: 'droid_serif';
+    src: url('../fonts/DroidSerif-Regular-webfont.eot') format('eot');
+    src: url('../fonts/DroidSerif-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_sans';
+    src: url('../fonts/DroidSans-webfont.eot') format('eot');
+    src: url('../fonts/DroidSans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_sans';
+    src: url('../fonts/DroidSans-Bold-webfont.eot') format('eot');
+    src: url('../fonts/DroidSans-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+html {
+  text-shadow: 0.02em 0.02em 0.01em #000000;
+  font-family: droid-serif, serif;
+  color: #f7faff;
+}
+
+body {
+  font-size: 20px;
+  text-align: center;
+  background-color: #2f353b;
+}
+h1 {
+  font-family: droid-sans, sans-serif;
+}
+h2 {
+  display: none;
+}
+.AGBtn1 {
+  height: 3em;
+  line-height: 2em;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  border-radius: 0.3em;
+  background-color: linear-gradient(to bottom right, #ddd, #777);
+  box-shadow: /*1px 1px 1px black,*/
+              inset 0.2em 0.3em 0.5em rgba(88,88,88,0.3),
+              inset -0.2em -0.3em 0.5em rgba(0,0,0,0.5);
+  overflow: auto;
+  }
+.AGBtn1:focus {
+  background-color: linear-gradient(to bottom right, #eee, #888);
+  box-shadow: 0.1em 0.1em 0.1em #000000,
+              inset 0.2em 0.3em 0.5em rgba(88,88,88,0.3),
+              inset -0.2em -0.3em 0.5em rgba(0,0,0,0.5);
+        
+}
+.AGBtn1:hover {
+  background-color: linear-gradient(to bottom right, #eee, #888);
+  color: white;
+}
+.AGBtn1:active {
+  box-shadow: inset 0.2em 0.2em 0.1em black,
+  inset 0.2em 0.3em 0.5em rgba(0,0,0,0.3),
+  inset -0.2em -0.3em 0.5em rgba(255,255,255,0.5);
+}
+label {
+  width: 70%;
+  margin: auto;
   display: block;
+  margin-bottom: 0.3em;
+}
+input {
+  height: 3em;
+  border: none;
+  border-radius: 0.3em;
+  width: 70%;
+}
+#controls button {
+  display: block;
+  margin: 0.3em auto;
+  width: 3em;
+  background-image: url(../img/magnifier250x250.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div {
+  margin: 0.2em auto;
+  padding: 1em;
+  background-color: #D3D3D3;
+  border: 0.05em solid #000000;
+  border-left: 0.5em solid #FF4500;
+  border-bottom: 0.1em solid #FF4500;
+  color: #000000;
+}
+div:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+div:focus {
+  background-color: #ffffff;
+}
+
+h3 {
+  text-shadow: 0.02em 0.02em 0.01em #ffffff;
+}
+
+p {
+  color: #000000;
+  text-shadow: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2em;
+  }
+  h2 {
+    font-size: 1.0em;
+  }
 }
