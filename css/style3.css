@@ -1,0 +1,182 @@
+/* fonts */
+@font-face {
+    font-family: 'droid_serif';
+    src: url('../fonts/DroidSerif-Regular-webfont.eot') format('eot');
+    src: url('../fonts/DroidSerif-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_sans';
+    src: url('../fonts/DroidSans-webfont.eot') format('eot');
+    src: url('../fonts/DroidSans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_sans';
+    src: url('../fonts/DroidSans-Bold-webfont.eot') format('eot');
+    src: url('../fonts/DroidSans-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* template buttons style */
+
+/*  button 1  */
+.AGBtn1 {
+  height: 3em;
+  border: none;
+  outline: none;
+  border-radius: 0.3em;
+  background-color: linear-gradient(to bottom right, #ddd, #777);
+  box-shadow: /*1px 1px 1px black,*/
+              inset 0.2em 0.3em 0.5em rgba(88,88,88,0.3),
+              inset -0.2em -0.3em 0.5em rgba(0,0,0,0.5);
+  overflow: auto;
+  }
+.AGBtn1:focus {
+  background-color: linear-gradient(to bottom right, #eee, #888);
+  box-shadow: 0.1em 0.1em 0.1em #000000,
+              inset 0.2em 0.3em 0.5em rgba(88,88,88,0.3),
+              inset -0.2em -0.3em 0.5em rgba(0,0,0,0.5);
+        
+}
+.AGBtn1:hover {
+  background-color: linear-gradient(to bottom right, #eee, #888);
+  color: white;
+}
+.AGBtn1:active {
+  box-shadow: inset 0.2em 0.2em 0.1em black,
+  inset 0.2em 0.3em 0.5em rgba(0,0,0,0.3),
+  inset -0.2em -0.3em 0.5em rgba(255,255,255,0.5);
+}
+
+/* search button 1 (needs an image: magnifier-smaller-250x250-bordered.png) */
+.AGSearchBtn1 {
+  height: 3em;
+  width:3em;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  border-radius: 0.3em;
+  background: #777;
+  background: url(../img/magnifier-smaller-250x250-bordered.png) no-repeat  center/contain;
+  background: url(../img/magnifier-smaller-250x250-bordered.png) no-repeat  center/contain, linear-gradient(to bottom right, #c4c4c4, #454545);
+  box-shadow: inset 0.2em 0.1em 0.5em #777,
+              inset -0.1em -0.2em 0.3em #2b2b2b;
+  transition-property: box-shadow;
+  }
+.AGSearchBtn1:hover {
+  background: #dedede;
+  background: url(../img/magnifier-smaller-250x250-bordered.png) no-repeat  center/contain;
+  background: url(../img/magnifier-smaller-250x250-bordered.png) no-repeat  center/contain, linear-gradient(to bottom right, #f5f5f5, #888);
+}
+.AGSearchBtn1:focus {
+  background: #dedede;
+  background: url(../img/magnifier-smaller-250x250-bordered.png) no-repeat  center/contain;
+  background: url(../img/magnifier-smaller-250x250-bordered.png) no-repeat  center/contain, linear-gradient(to bottom right, #f5f5f5, #888);
+  box-shadow: 0.05em 0.05em 0.1em #ff4500,
+              -0.05em -0.05em 0.1em #ff4500,
+              inset 0.2em 0.1em 0.5em #777,
+              inset -0.1em -0.2em 0.3em #2b2b2b;      
+}
+.AGSearchBtn1:active {
+  box-shadow: inset 0.1em 0.1em 0.1em #000000,
+  inset -0.02em -0.02em 0.1em #000000,
+  inset -0.2em -0.3em 0.5em #c4c4c4;
+}
+
+
+/* Other style for page ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* main style */
+* {
+margin-bottom: 0.6em;
+}
+html {
+  text-shadow: 0.02em 0.02em 0.01em #000000;
+  font-family: droid_serif, serif;
+  color: #f7faff;
+  font-size: 20px;
+}
+
+body {
+  text-align: center;
+  background-color: #454e57;
+  margin: 0;
+}
+.hidden {
+  display: none;
+}
+
+/* headers style */
+h1 {
+  margin-top: 0.6em;
+  font-family: droid_sans, sans-serif;
+}
+h2 {
+  display: none;
+  font-family: droid_sans, sans-serif;
+}
+h3 {
+  font-family: droid_sans, sans-serif;
+  text-shadow: none;
+}
+
+/* controls section style */
+label {
+  display: block;
+  margin: auto;
+  margin-bottom: 0.6em;
+  width: 50%;
+  padding: 0;
+}
+input {
+  display: block;
+  margin: auto;
+  margin-bottom: 0.6em;
+  width: 19em;
+  height: 3em;
+  border: none;
+  border-radius: 0.3em;
+  line-height: 1em;
+  font-size: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+div {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 0.6em;
+  padding: 1em;
+  background: #ededed;
+  border-left: 0.5em solid #FF4500;
+  border-bottom: 0.1em solid #FF4500;
+  border-bottom-left-radius: 1em;
+  border-top-right-radius: 1em;
+  color: #000000;
+}
+div:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+div:focus {
+  background-color: #ffffff;
+}
+
+div p {
+  color: #000000;
+  text-shadow: none;
+  padding: 1em;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  input {
+    width: 60%;
+    text-align: center;
+  }
+}
