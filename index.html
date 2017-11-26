@@ -7,26 +7,30 @@
     <meta name="author" content="A.Gurin">
     <meta name="keywords" content="Search Wiki">
     <meta name="description" content="Search Wikipedia for specific request, or get random article">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
   </head>
   <body>
     <article>
       <h1>Search Wikipedia</h1>
+      <button id="returnBtnTop" class="AGBtn1 hidden">New search</button>
       <section id="controls">
         <h2>Controls</h2>
         <label for="rndArtBtn">Get random article from Wikipedia</label>
-        <button id="rndArtBtn" class="AGBtn1"></button>
+        <button id="rndArtBtn" class="AGSearchBtn1"></button>
         <label for="searchInp">Search Wikipedia for specific keyword</label>
         <input id="searchInp" type="text" placeholder="Enter your search request" required>
-        <button id="searchBtn" class="AGBtn1"></button>
+        <button id="searchBtn" class="AGSearchBtn1"></button>
       </section>
       <section id="searchResults">
         <h2>Search results</h2>
       </section>
+      <button id="returnBtnBottom" class="AGBtn1 hidden" href="#controls">Return to top</button>
     </article>
     <footer>
+      <address>
+        <p id="author">Created by A.Gurin: <a href="mailto:nucleusofgood@gmail.com">nucleusofgood@gmail.com</a></p>
+      </address>
     </footer>
-    
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main2.js"></script>
   </body>
 </html>
