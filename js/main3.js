@@ -36,7 +36,11 @@ function getArt(url, id) {
   request.responseType = 'json';
   request.addEventListener('load', function (e) {
     if (request.status === 200) {
-      responseAction(request.response, id);
+      if (typeof (request.response) === 'string') { ///for IE11 compatability
+        responseAction(JSON.parse(request.response), id);
+      } else {
+        responseAction(request.response, id);
+      }
     } else {
       console.log(e);
     }
@@ -52,9 +56,9 @@ function responseAction(response, id) {
     });
   } else {
     var key = Object.keys(response.query.pages)[0],
-    resultDiv = document.createElement('div'),
-    titleHead = document.createElement('h3'),
-    extractsPara = document.createElement('p');
+      resultDiv = document.createElement('div'),
+      titleHead = document.createElement('h3'),
+      extractsPara = document.createElement('p');
     resultDiv.setAttribute('tabindex', 0);
     resultDiv.addEventListener('click', function () {
       window.open(response.query.pages[key].canonicalurl, '_blank');
@@ -72,10 +76,10 @@ function responseAction(response, id) {
 rndBtn.addEventListener('click', function () {
   'use strict';
   buildUrl(this.id);
-  if (returnBtnTop.classList.toString().indexOf('hidden') == -1) {
+  if (returnBtnTop.classList.toString().indexOf('hidden') === -1) {
     returnBtnTop.className += ' hidden';
   }
-  if (returnBtnBottom.classList.toString().indexOf('hidden') == -1) {
+  if (returnBtnBottom.classList.toString().indexOf('hidden') === -1) {
     returnBtnBottom.className += ' hidden';
   }
 });
@@ -87,13 +91,15 @@ searchBtn.addEventListener('click', function () {
   returnBtnBottom.classList.remove('hidden');
 });
 returnBtnTop.addEventListener('click', function () {
-  if (returnBtnTop.classList.toString().indexOf('hidden') == -1) {
+  'use strict';
+  if (returnBtnTop.classList.toString().indexOf('hidden') === -1) {
     returnBtnTop.className += ' hidden';
   }
   controls.classList.remove('hidden');
 });
 returnBtnBottom.addEventListener('click', function () {
-  if (returnBtnTop.classList.toString().indexOf('hidden') == -1) {
+  'use strict';
+  if (returnBtnTop.classList.toString().indexOf('hidden') === -1) {
     returnBtnTop.className += ' hidden';
   }
   controls.classList.remove('hidden');
