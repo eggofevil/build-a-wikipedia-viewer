@@ -1,3 +1,11 @@
+// изменить обращение на английскую википедию.
+// запретить запрос с пустой строкой поиска.
+// поискать возможность отправки поискового запроса по нажатию на enter.
+// посмотреть запрос рандомной статьи на предмет категорий статей.
+// глянуть есть ли возможность запускать поиск с одной кнопки.
+// может, добавить возможность запроса к другим версиям вики.
+// может, добавить русскоязычную версию страницы.
+
 var baseUrl,
   rndBtn = document.querySelector('#rndArtBtn'),
   searchBtn = document.querySelector('#searchBtn'),
@@ -5,7 +13,6 @@ var baseUrl,
   searchResults = document.querySelector('#searchResults'),
   controls = document.querySelector('#controls'),
   article = document.querySelector('article'),
-  header = document.querySelector('h1'),
   returnBtnTop = document.querySelector('#returnBtnTop'),
   returnBtnBottom = document.querySelector('#returnBtnBottom');
 
@@ -70,8 +77,6 @@ function responseAction(response, id) {
     resultDiv.appendChild(extractsPara);
   }
 }
-
-
 
 rndBtn.addEventListener('click', function () {
   'use strict';
